@@ -13,11 +13,20 @@ public struct MixedGroupBuilder<Element> {
         .init(subgroups: subgroups)
     }
     
+    public static func buildEither<Element>(first: Element) -> Element {
+        first
+    }
+    
+    public static func buildEither<Element>(second: Element) -> Element {
+        second
+    }
+    
     public static func buildBlock() -> MixedGroup<Element> {
         .init()
     }
     
 }
+
 
 public extension MixedGroupBuilder {
     static func buildExpression(_ element: Element) -> MixedGroup<Element> {
