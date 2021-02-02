@@ -7,7 +7,7 @@
 
 import Foundation
 
-@_functionBuilder
+@resultBuilder
 public struct MixedGroupBuilder<Element> {
     public static func buildBlock(_ subgroups: MixedGroup<Element>...) -> MixedGroup<Element> {
         .init(subgroups: subgroups)
